@@ -7,6 +7,9 @@ import './account-overview.css';
 export const AccountOverview = ({ data }) => {
   console.log(data);
 
+  //TODO:
+  //1. Split this mess up into smaller components
+  //2. tests
   return (
     <div className="accountOverviewWrapper">
       <div className="accountOverview">

@@ -1,3 +1,7 @@
+/*TODO:
+ * 1. Create colour variables
+ * 2. Create wrappers to align everything
+ */
 .accountOverviewWrapper {
   background-color: #F4F4F4;
   display: flex;
