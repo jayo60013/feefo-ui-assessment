@@ -9,4 +9,4 @@
 ## Achieved design
 
 ![achieved design](./achieved_design.png?raw=true)
-![achieved design mobile](./achieved_design_mobole.png?raw=true)
+![achieved design mobile](./achieved_design_mobile.png?raw=true)
