@@ -1,0 +1,32 @@
+/*TODO:
+ * 1. Create colour variables
+ * 2. Create wrappers to align everything
+ */
+.accountOverviewWrapper {
+  background-color: var(--primary-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accountOverview {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5em;
+}
+
+.accountOverviewHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding: 2.5em 0 2.5em 0;
+}
+
+.accountOverviewHeaderText {
+  color: var(--primary-color);
+  text-align: left;
+}

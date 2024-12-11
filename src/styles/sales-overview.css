@@ -1,0 +1,93 @@
+.salesOverview {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 var(--border-radius) var(--border-radius) rgba(0, 0, 0, 0.05);
+}
+
+.salesOverviewHeaderRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.salesIcon {
+  color: var(--primary-color-blue);
+  padding-right: 0.3em;
+}
+
+.salesOverviewSales {
+  background-color: var(--secondary-background-2);
+  padding-bottom: 0.5em;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.salesOverviewHeader {
+  font-size: 2em;
+  font-weight: 700;
+  padding: 0.5em;
+  color: var(--primary-color);
+}
+
+.salesOverviewSummary {
+  padding-left: 0.75em;
+  text-align: left;
+  color: var(--secondary-color-1);
+  font-size: 1.25em;
+}
+
+.salesOverviewSummary strong {
+  color: var(--primary-color);
+}
+
+.salesOverviewMetric {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: var(--secondary-background-1);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+@media (max-width: 700px) {
+  .salesOverviewMetric {
+    flex-direction: column;
+  }
+}
+
+.salesOverviewMetric>div {
+  padding-left: 1em;
+  border: 2px solid var(--primary-background);
+  width: 90%;
+  width: 100%;
+  text-align: left;
+}
+
+.salesOverviewUploads {
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.salesOverviewLines {
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.salesOverviewPercentage {
+  color: var(--primary-color-green);
+  font-weight: 700;
+  font-size: 3em;
+  padding: 0;
+  margin: 0.3em 0 0 0;
+}
+
+.salesOverviewPercentageLabel {
+  text-transform: uppercase;
+  color: var(--secondary-color-2);
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.infoIcon {
+  font-size: 1.75em;
+  color: #8D8D8D;
+  padding: 0.75em 0.75em 0 0;
+}

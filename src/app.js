@@ -1,5 +1,5 @@
 import './app.css';
-import AccountOverview from './account-overview';
+import AccountOverview from './components/account-overview';
 
 function App() {
   const accountOverviewStub = {
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <AccountOverview data={accountOverviewStub}/>
+      <AccountOverview data={accountOverviewStub} />
     </div>
   );
 }
