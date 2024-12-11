@@ -1,9 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-//TODO: see if you can remove this?
-import '../styles/constants.css';
 import '../styles/contact-support.css';
 
 export const ContactSupport = ({ supportContact }) => {
@@ -31,5 +30,12 @@ export const ContactSupport = ({ supportContact }) => {
     </div>
   )
 }
+
+ContactSupport.propTypes = {
+  supportContact: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }),
+};
 
 export default ContactSupport;

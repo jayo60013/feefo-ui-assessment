@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
-import '../styles/constants.css';
 import '../styles/sales-overview.css';
 
-export const ContactSupport = ({ salesOverview }) => {
+export const SalesOverview = ({ salesOverview }) => {
+
+  const getPercentage = (success, total) => {
+    const percentage = success / total * 100;
+    return Math.floor(percentage);
+  };
 
   return (
     <div className="salesOverview">
@@ -25,13 +30,13 @@ export const ContactSupport = ({ salesOverview }) => {
       <div className="salesOverviewMetric">
         <div className="salesOverviewUploads">
           <p className="salesOverviewPercentage">
-            {salesOverview.successfulUploads / salesOverview.uploads * 100}%
+            {getPercentage(salesOverview.successfulUploads, salesOverview.uploads)}%
             </p>
           <p className="salesOverviewPercentageLabel">Upload success</p>
         </div>
         <div className="salesOverviewLines">
           <p className="salesOverviewPercentage">
-            {salesOverview.linesSaved / salesOverview.linesAttempted * 100}%
+            {getPercentage(salesOverview.linesSaved, salesOverview.linesAttempted)}%
             </p>
           <p className="salesOverviewPercentageLabel">Lines saved</p>
         </div>
@@ -40,4 +45,13 @@ export const ContactSupport = ({ salesOverview }) => {
   );
 }
 
-export default ContactSupport;
+SalesOverview.propTypes = {
+  salesOverview: PropTypes.shape({
+    uploads: PropTypes.number.isRequired,
+    successfulUploads: PropTypes.number.isRequired,
+    linesAttempted: PropTypes.number.isRequired,
+    linesSaved: PropTypes.number.isRequired,
+  }),
+};
+
+export default SalesOverview;

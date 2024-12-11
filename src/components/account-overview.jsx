@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ContactSupport from './contact-support';
 import SalesOverview from './sales-overview';
 
@@ -6,8 +7,6 @@ import '../styles/constants.css';
 import '../styles/account-overview.css';
 
 export const AccountOverview = ({ data }) => {
-  //TODO:
-  //2. tests
   return (
     <div className="accountOverviewWrapper">
       <div className="accountOverview">
@@ -22,5 +21,20 @@ export const AccountOverview = ({ data }) => {
     </div>
   )
 }
+
+AccountOverview.propTypes = {
+  data: PropTypes.shape({
+    supportContact: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    }),
+    salesOverview: PropTypes.shape({
+      uploads: PropTypes.number.isRequired,
+      successfulUploads: PropTypes.number.isRequired,
+      linesAttempted: PropTypes.number.isRequired,
+      linesSaved: PropTypes.number.isRequired,
+    }),
+  }),
+};
 
 export default AccountOverview;

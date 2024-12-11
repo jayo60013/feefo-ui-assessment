@@ -15,7 +15,6 @@ function App() {
     }
   }
 
-
   return (
     <div className="App">
       <AccountOverview data={accountOverviewStub} />

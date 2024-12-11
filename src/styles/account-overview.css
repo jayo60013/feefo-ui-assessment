@@ -1,7 +1,3 @@
-/*TODO:
- * 1. Create colour variables
- * 2. Create wrappers to align everything
- */
 .accountOverviewWrapper {
   background-color: var(--primary-background);
   display: flex;
@@ -18,13 +14,19 @@
 }
 
 .accountOverviewHeader {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   width: 100%;
   position: relative;
   padding: 2.5em 0 2.5em 0;
 }
+
+ @media(max-width: 700px) {
+  .accountOverviewHeader {
+    flex-direction: column;
+  }
+ }
 
 .accountOverviewHeaderText {
   color: var(--primary-color);
